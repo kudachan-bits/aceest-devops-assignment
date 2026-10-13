@@ -12,7 +12,7 @@ pipeline {
         stage('Syntax and lint') {
             steps {
                 sh 'docker run --rm -e PYTHONPYCACHEPREFIX=/tmp/pycache aceest-jenkins:$BUILD_NUMBER python -m compileall -q app.py services.py tests'
-                sh 'docker run --rm aceest-jenkins:$BUILD_NUMBER python -m ruff check --select E9,F63,F7,F82 app.py services.py tests'
+                sh 'docker run --rm aceest-jenkins:$BUILD_NUMBER python -m ruff check --no-cache --select E9,F63,F7,F82 app.py services.py tests'
             }
         }
         stage('Tests') {
