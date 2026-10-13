@@ -61,3 +61,13 @@ Configure Jenkins as Pipeline from SCM with this public repository, branch */mai
 ## Actual execution evidence
 
 Add your verified laptop and Jenkins VM versions, test count, GitHub Actions result/link and Jenkins build result/link here after running the project. Do not treat supplied configuration as proof that remote builds passed.
+
+## Verified GitHub Actions Results
+
+The GitHub Actions run for commit `518f051` successfully completed dependency installation, Python compilation, lint checks, Docker image assembly, and automated testing.
+
+- Python compilation completed successfully.
+- Ruff reported `All checks passed!`.
+- Docker successfully built the `aceest-ci` image.
+- Pytest ran inside the Docker container and reported `28 passed in 0.25s`.
+
